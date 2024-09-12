@@ -1,0 +1,14 @@
+{
+  "name": "road-to-problem-solver",
+  "version": "1.0.0",
+  "description": "An internal research group for coding tests in AlgoDale",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ferv0r2",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3"
+  }
+}
