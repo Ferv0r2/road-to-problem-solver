@@ -1,4 +1,4 @@
-// 문제 링크: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+// 문제 링크: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 /**
  * 접근법
@@ -15,7 +15,7 @@
  *
  * 1. min은 가장 작은 값, max는 가장 큰 값으로 초기화한다.
  * 2. 배열을 순회하면서 min과 비교하여 가장 작은 값을 찾는다.
- * 3. min보다 큰 값이 나오면 max와 비교하여 최대 이윤을 구한다. *
+ * 3. min보다 큰 값이 나오면 max와 비교하여 최대 이윤을 구한다.
  *
  * Submit 1: (58 ms, 58.86 MB)
  * Submit 2: (72 ms, 59.58 MB)
