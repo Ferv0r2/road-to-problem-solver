@@ -20,11 +20,11 @@ const testCases = [
   },
   {
     input: [],
-    expected: [],
+    expected: null,
   },
   {
-    input: [[]],
-    expected: [],
+    input: [null],
+    expected: null,
   },
 ]
 

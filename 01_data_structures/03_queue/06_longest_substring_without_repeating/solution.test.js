@@ -18,7 +18,7 @@ const testCases = [
 describe('Solution Tests', () => {
   testCases.forEach(({ input, expected }, idx) => {
     test(`Example ${idx + 1}`, () => {
-      expect(solution(input, n)).toEqual(expected)
+      expect(solution(input)).toEqual(expected)
     })
   })
 })
