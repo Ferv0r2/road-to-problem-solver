@@ -26,6 +26,7 @@ function solution(lists) {
 
   // 1차원 배열 형태로 변환
   for (let item of lists) {
+    if (!item) continue
     while (item) {
       queue.push(item.val)
       item = item.next
