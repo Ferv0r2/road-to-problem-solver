@@ -1,21 +1,39 @@
-const { solution } = require('./solution')
+const { solution1, solution2 } = require('./solution')
+const { arrayToList, listToArray } = require('../utils')
 
-const listNode = (val = 0, next = null) => ({ val, next })
+const solutions = [
+  { name: 'Solution 1', func: solution1 },
+  { name: 'Solution 2', func: solution2 },
+]
 
 const testCases = [
   {
-    head: listNode(1, listNode(2, listNode(3, listNode(4, listNode(5))))),
-    n: 2,
-    expected: listNode(1, listNode(2, listNode(3, listNode(5)))),
+    input: { head: [1, 2, 3, 4, 5], n: 2 },
+    output: [1, 2, 3, 5],
   },
-  { head: listNode(1), n: 1, expected: null },
-  { head: listNode(1, listNode(2)), n: 1, expected: listNode(1) },
+  {
+    input: { head: [1], n: 1 },
+    output: [],
+  },
+  {
+    input: { head: [1, 2], n: 1 },
+    output: [1],
+  },
+  {
+    input: { head: [1, 2], n: 2 },
+    output: [2],
+  },
 ]
 
-describe('Solution Tests', () => {
-  testCases.forEach(({ head, n, expected }, idx) => {
-    test(`Example ${idx + 1}`, () => {
-      expect(solution(head, n)).toEqual(expected)
+solutions.forEach(({ name, func }) => {
+  describe(`${name} Tests`, () => {
+    testCases.forEach(({ input, output }, idx) => {
+      const head = arrayToList(input.head)
+      const result = func(head, input.n)
+      const resultArray = listToArray(result)
+      test(`Example ${idx + 1}`, () => {
+        expect(resultArray).toEqual(output)
+      })
     })
   })
 })
