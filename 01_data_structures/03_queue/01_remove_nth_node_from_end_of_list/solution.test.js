@@ -1,5 +1,5 @@
 const { solution1, solution2 } = require('./solution')
-const { arrayToList, listToArray } = require('../utils')
+const { arrayToList, listToArray } = require('../../../utils/linked_list')
 
 const solutions = [
   { name: 'Solution 1', func: solution1 },

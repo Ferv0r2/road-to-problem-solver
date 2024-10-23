@@ -1,4 +1,5 @@
-const { solution, ListNode } = require('./solution')
+const { ListNode } = require('../../../utils/linked_list')
+const { solution } = require('./solution')
 
 const testCases = [
   {
