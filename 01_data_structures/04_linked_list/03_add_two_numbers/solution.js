@@ -27,6 +27,7 @@ function solution(l1, l2) {
     // 합의 십의 자리를 carry에 저장한다.
     carry = Math.floor(sum / 10)
 
+    // 십의 자리를 제외한 일의 자리는 val에 저장한다.
     current.next = { val: sum % 10, next: null }
     current = current.next
 
