@@ -1,4 +1,4 @@
-const { solution } = require('./solution')
+const { solution2 } = require('./solution')
 
 const testCases = [
   {
@@ -17,7 +17,7 @@ const testCases = [
 
 describe('Solution Tests', () => {
   testCases.forEach(({ input, expected }, idx) => {
-    const result = solution(input.nums, input.target)
+    const result = solution2(input.nums, input.target)
     test(`Example ${idx + 1}`, () => {
       expect(result).toEqual(expected)
     })
