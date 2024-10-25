@@ -14,12 +14,16 @@
  * @return {number}
  */
 function solution1(n) {
+  // n이 3 이하인 경우는 미리 계산한다.
   const dp = [0, 1, 2]
 
+  // n을 3부터 순회한다.
   for (let i = 3; i <= n; i++) {
+    // 현재 index는 이전 두 수의 합이다.
     dp[i] = dp[i - 1] + dp[i - 2]
   }
 
+  // n번째 수를 반환한다.
   return dp[n]
 }
 
@@ -34,11 +38,14 @@ function solution1(n) {
 function solution2(n) {
   const hashTable = { 1: 1, 2: 2 }
 
+  // 재귀 함수를 사용하여 해시 테이블에 저장된 값이 있으면 반환한다.
   const recursion = (n) => {
     if (hashTable[n]) return hashTable[n]
 
+    // 해시 테이블에 저장된 값이 없으면 재귀 함수를 호출한다.
     hashTable[n] = recursion(n - 1) + recursion(n - 2)
 
+    // n번째 수를 반환한다.
     return hashTable[n]
   }
 
