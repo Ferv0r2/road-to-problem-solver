@@ -1,5 +1,8 @@
 # [큐](https://www.algodale.com/data-structures/queue/)
 
+- FIFO (First In Fist Out) / 입출구가 따로 있는 구조 front-rear
+- 배열/리스트 구현 시 스택과 동일하나 이중 연결 리스트로 구현
+
 ## 문제 목록
 
 1. [x] [LeetCode - Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
