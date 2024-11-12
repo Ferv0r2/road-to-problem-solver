@@ -19,5 +19,5 @@ function solution(nums) {
   return new Set(nums).size !== nums.length
 }
 
-// 역대 최처 난이도!
+// 역대 최저 난이도!
 module.exports = { solution }
